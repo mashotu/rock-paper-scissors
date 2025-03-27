@@ -15,14 +15,14 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    let choice = prompt("Enter rock, paper, scissors.");
-    choice = choice.toLowerCase();
+    let choice = null;
 
-    while (!CHOICES.includes(choice)) {
-        choice = prompt("You entered an invalid input, your options are rock, paper, scissors");
+    do {
+        choice = prompt("Enter rock, paper or scissors");
         choice = choice.toLowerCase();
-    }
+    } while (!CHOICES.includes(choice));
 
     return choice;
 }
+
 
