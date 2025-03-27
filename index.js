@@ -7,6 +7,23 @@
  *  3 - Scissors
  *  Essentially assign a random number and return the results based on the number, or using Arrays (going the array route is a lot more elegant)
  */
+
+const choices = ["rock", "paper", "scissors"];
+
 function getComputerChoice() {
-    return ["Rock", "Paper", "Scissors"][Math.floor(Math.random() * 3)]
+    return choices[Math.floor(Math.random() * choices.length)]
 }
+
+function getHumanChoice() {
+    let choice = prompt("Enter rock, paper, scissors.");
+    choice = choice.toLowerCase();
+
+    while (!choices.includes(choice)) {
+        choice = prompt("You entered an invalid input, your options are rock, paper, scissors");
+        choice = choice.toLowerCase();
+    }
+
+    return choice;
+}
+
+getHumanChoice();
