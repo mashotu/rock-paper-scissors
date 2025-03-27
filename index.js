@@ -10,6 +10,9 @@
 
 const CHOICES = ["rock", "paper", "scissors"];
 
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
     return CHOICES[Math.floor(Math.random() * CHOICES.length)]
 }
@@ -24,5 +27,7 @@ function getHumanChoice() {
 
     return choice;
 }
+
+
 
 
