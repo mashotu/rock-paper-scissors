@@ -26,4 +26,4 @@ function getHumanChoice() {
     return choice;
 }
 
-getHumanChoice();
+
