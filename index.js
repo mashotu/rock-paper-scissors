@@ -28,6 +28,25 @@ function getHumanChoice() {
     return choice;
 }
 
+function playRound(humanChoice, computerChoice) {
+    if ((humanChoice === "paper" && computerChoice === "rock") ||
+        (humanScore === "rock" && computerScore === "scissors") ||
+        (humanScore === "paper" && computerScore === "scissors")) {
+        humanScore++;
+    }
+    else {
+        computerScore++;
+    }
 
+    if (humanChoice === "paper" && computerChoice === "rock") {
+        humanScore++;
+    }
 
+    if (humanScore === 5) {
+        console.log("You win!");
+    }
+    else {
+        console.log("The computer won!")
+    }
+}
 
