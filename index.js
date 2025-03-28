@@ -38,10 +38,6 @@ function playRound(humanChoice, computerChoice) {
         computerScore++;
     }
 
-    if (humanChoice === "paper" && computerChoice === "rock") {
-        humanScore++;
-    }
-
     if (humanScore === 5) {
         console.log("You win!");
     }
